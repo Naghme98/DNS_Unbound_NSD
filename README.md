@@ -1,14 +1,14 @@
 # DNS_Unbound_NSD
 
 ## Task 1: Downloading and Installing a Caching Name Server
-:::info
+--------------
 1. Why is it wise to verify your download?
 2. Download the BIND tarball (also if you are doing the Unbound+NSD part) and check its validity using one of the signatures.
 3. Which mechanism is the best one to use (signatures or hashes)? Why?
 4. make sure your installation does not contain a previous version of the servers, as that can really mess things up (show how to check)
 5. Make sure each server will look for its configuration files in Unbound - /usr/local/etc/unbound
 6. What is the difference between /etc, /usr/etc, /usr/local/etc
-:::
+--------------
 
 ### Answers:
 
@@ -52,7 +52,6 @@ unbound-checkconf
 
 ## Task 2,3: Configuring Caching Name Server, Running Caching Name Server
 
-:::info
 
 1. Why are caching-only name servers still useful?
 2. Installing and Configuration:
@@ -64,7 +63,7 @@ unbound-checkconf
 3. What other commands/functions does unbound-control provide? 
 4. What is the difference between stop -> start and reload?
 
-:::
+-------------------------------------------------------------
 
 ### Answers:
 
@@ -115,20 +114,16 @@ Figure 10: ubound log file
 3. With unbound-control, we can stop, start, reload the unbound server. Additionaly, by 'stats' we can see the statistics. Dump_cache is also a useful command and so on.
 4. By stoping the server, the server daemon will exits and 'Start' will start the server and will search for configuration file and use it. Reload flushes the cache and reads  the  config file fresh.
 
-:::warning
 
-For the next part, I switched to a server with IP address 23.88.50.58 and tried the above process again.
-
-:::
+* For the next part, I switched to a server with IP address 23.88.50.58 and tried the above process again.
 
 
 ## Task 4:Authoritative Name Server
-:::info
 1. NSD Configuration
 2. What is a private DNS zone? Is stX.sne21.ru private?
 3. What information was needed by TAs so they can implement the delegation?
 4. Create a forward mapping zone file 
-:::
+----------------------------------------------------
 
 ### Answers:
 
