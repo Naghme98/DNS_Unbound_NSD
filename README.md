@@ -19,8 +19,10 @@
 
 
 ![Alt text](https://i.imgur.com/39nZgx1.png)
-|:--:|
-| <b>Figure 1: Bind signature validation</b>|
+
+<p align = "center">
+Figure 1: Bind signature validation
+</p>
 
 3. Hashes will give us Integrity but not authentication. That is, they are useful for ensuring the file or program you have matches the source, but they provide no way of verifying that the source is legitimate. Also, some mathematical weaknesses make them vulnerable.But,signatures are done with the private key, verification with the public key.  As a result, I believe that Signatures are more secure, but hashes are easier to use. 
 
