@@ -17,10 +17,8 @@
 
 2. For this question I used theses commands (Figure 1).
 
-
-![Alt text](https://i.imgur.com/39nZgx1.png)
-
 <p align = "center">
+![Alt text](https://i.imgur.com/39nZgx1.png)
 Figure 1: Bind signature validation
 </p>
 
