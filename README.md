@@ -1,7 +1,7 @@
 # DNS using Unbound + NSD
 
 ## Task 1: Downloading and Installing a Caching Name Server
---------------
+
 1. Why is it wise to verify your download?
 2. Download the BIND tarball (also if you are doing the Unbound+NSD part) and check its validity using one of the signatures.
 3. Which mechanism is the best one to use (signatures or hashes)? Why?
@@ -44,7 +44,7 @@ unbound-checkconf
 
 6. /usr/local is usually for applications built from source not using common package tools (like apt, ..) . The /etc directory contains system-wide configuration files,
 
-
+-----------------------------------------------------------
 ## Task 2,3: Configuring Caching Name Server, Running Caching Name Server
 
 
@@ -77,34 +77,50 @@ The final configuration for unbound.conf is in Figure 7. As you can see I set th
 
 Diging result I in Figure 8. It is obvious that for the first query it spent time to get the results but for the second time, the IP address for the wanted destination was ready inside the DNS cache. So time got less.
 
-<center>
+
 
 ![](https://i.imgur.com/wZqyx1H.png)
-Figure 3: Unbound control setup
+<p align = "center">
+   <i>Figure 3: Unbound control setup</i>
+</p>
+   
 
 ![](https://i.imgur.com/pPQCMwC.png)
-Figure 4: /etc/systemd/resolved.conf
+<p align = "center">
+   <i>Figure 4: /etc/systemd/resolved.conf</i>
+</p>
 
 ![](https://i.imgur.com/sp8CFa4.png)
-Figure 5: Resolved.conf
+<p align = "center">
+   <i>Figure 5: Resolved.conf</i>
+</p>
 
 ![](https://i.imgur.com/cBt1Wsz.png)
-Figure 6: Linking
+<p align = "center">
+   <i>Figure 6: Linking</i>
+ </p>  
 
 ![](https://i.imgur.com/qiuT3GF.png)
-Figure 7: unbound.conf finall edition
+<p align = "center">
+   <i>Figure 7: unbound.conf finall edition</i>
+</p>
 
 
 ![](https://i.imgur.com/2STkonO.png)
-Figure 8: Dig results after deploying DNS cache
+<p align = "center">
+   <i>Figure 8: Dig results after deploying DNS cache</i>
+</p>   
 
 ![](https://i.imgur.com/uEUWDRs.png)
-Figure 9: Dns cache dump
+<p align = "center">
+   <i>Figure 9: Dns cache dump</i>
+</p>   
 
 ![](https://i.imgur.com/TSCc4o7.png)
-Figure 10: ubound log file
+<p align = "center">
+   <i>Figure 10: ubound log file</i>
+</p>   
 
-</center>
 
 3. With unbound-control, we can stop, start, reload the unbound server. Additionaly, by 'stats' we can see the statistics. Dump_cache is also a useful command and so on.
 4. By stoping the server, the server daemon will exits and 'Start' will start the server and will search for configuration file and use it. Reload flushes the cache and reads  the  config file fresh.
@@ -112,7 +128,7 @@ Figure 10: ubound log file
 
 * For the next part, I switched to a server with IP address 23.88.50.58 and tried the above process again.
 
-
+---------------------------------------------------
 ## Task 4:Authoritative Name Server
 1. NSD Configuration
 2. What is a private DNS zone? Is stX.sne21.ru private?
@@ -131,25 +147,30 @@ TA reply:
 > Just to clarify, it should be 3(2) things: name of your subdomain, names of nameservers, and IP addresses of this nameservers (since in this case nameserver's name is inside the delegated domain)
 
 
-
-<center>
-
 ![](https://i.imgur.com/lIr9UoG.png)
-Figure 11: unbound.conf edited version to work with NSD
+<p align = "center">
+   <i>Figure 11: unbound.conf edited version to work with NSD</i>
+</p>   
 
 ![](https://i.imgur.com/7AVNvBx.png)
-Figure 12: NSD configuration
+<p align = "center">
+   <i>Figure 12: NSD configuration</i>
+</p>   
 
 ![](https://i.imgur.com/xwPhNlJ.png)
-Figure 13: st5.sne21.ru. zone file
+<p align = "center">
+   <i>Figure 13: st5.sne21.ru. zone file</i>
+</p>   
 
 ![](https://i.imgur.com/AZ6ibfX.png)
-Figure 14: Dig from local
+<p align = "center">
+   <i>Figure 14: Dig from local</i>
+</p>   
 
 ![](https://i.imgur.com/079cu2X.png)
-Figure 15: Dig from outside
-
-</center>
+<p align = "center">
+   <i>Figure 15: Dig from outside</i>
+</p>   
 
 ---
 ## References:
