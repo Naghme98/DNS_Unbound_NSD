@@ -17,9 +17,10 @@
 
 2. For this question I used theses commands (Figure 1).
 
-<p align = "center">
+
 ![Alt text](https://i.imgur.com/39nZgx1.png)
-Figure 1: Bind signature validation
+<p align = "center">
+   <i>Figure 1: Bind signature validation</i>
 </p>
 
 3. Hashes will give us Integrity but not authentication. That is, they are useful for ensuring the file or program you have matches the source, but they provide no way of verifying that the source is legitimate. Also, some mathematical weaknesses make them vulnerable.But,signatures are done with the private key, verification with the public key.  As a result, I believe that Signatures are more secure, but hashes are easier to use. 
@@ -30,7 +31,10 @@ Figure 1: Bind signature validation
 
 
 ![Alt text](https://i.imgur.com/yLCRdwz.png)
-*Figure 2: Checking Bind and Unbound previous versions.*
+
+<p align = "center">
+   <i>Figure 2: Checking Bind and Unbound previous versions.</i>
+</p>
 
 5. Whenever I ran this command, it went to that directory and read the unbound.conf file
 
